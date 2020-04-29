@@ -1,0 +1,21 @@
+{%load static %}
+<html>
+
+<head>
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/data.css' %}">
+{% endblock css %}
+</head>
+
+<title>
+    Comments
+</title>
+
+<body>
+    <div class = "heading">Testing PostgreSQL</div><br><br>
+    <br>
+    {% block content %}
+    {% endblock content %}
+</body>
+
+</html>

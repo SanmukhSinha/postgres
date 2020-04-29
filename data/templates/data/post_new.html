@@ -1,0 +1,10 @@
+{% extends 'data/base.html' %}
+{% load static %}
+
+{% block content %}
+    <span class="subheading">New Comment</span>
+    <form method="POST">{% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Save</button>
+    </form>
+{% endblock content %}

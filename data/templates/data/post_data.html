@@ -1,0 +1,22 @@
+{% extends 'data/base.html' %}
+{% load static %}
+
+{% block content %}
+<a class="subheading" href="{% url "new_data" %}" class="top-menu"><span>Add Comment</span></a>
+<br><br>
+<a id="clear" class="subheading" href="{% url "delete_data" %}" class="top-menu"><span>Delete Comments</span></a>
+<br><br>
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Comment</th>
+    </tr>
+    {% for c in comments%}
+    <tr>
+        <td>{{c.first_name}}</td>
+        <td>{{c.last_name}}</td>
+        <td>{{c.comment}}</td>
+    {% endfor%}
+</table>
+{% endblock content %}
